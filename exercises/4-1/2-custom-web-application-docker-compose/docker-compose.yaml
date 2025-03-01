@@ -1,0 +1,25 @@
+version: "3.3"
+
+networks:
+  app-network:
+
+volumes:
+  mysql_data:
+
+services:
+  frontend:
+    image: frontend:v2
+    container_name: frontend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    image: backend:v2
+    container_name: my-backend
+    networks:
+      - app-network
+

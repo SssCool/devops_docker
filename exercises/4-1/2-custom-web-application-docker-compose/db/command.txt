@@ -1,0 +1,8 @@
+docker pull mysql:latest
+
+docker run -d --name my-db -p 3306:3306 \
+  -e MYSQL_ROOT_PASSWORD=password \
+  -e MYSQL_DATABASE=userdb \
+  -e MYSQL_USER=user \
+  -e MYSQL_PASSWORD=password \
+  mysql:latest
