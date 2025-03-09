@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>User Registration</title>
 </head>
 <body>
-    <h2>Welcome</h2>
-    <ul>
-        <li><a href="/register">Register a New User</a></li>
-        <li><a href="/users">View Registered Users</a></li>
-    </ul>
+    <h2>User Registration</h2>
+    <form action="/register" method="post">
+        <input type="text" name="username" placeholder="Username" required><br>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <button type="submit">Register</button>
+    </form>
+    <a href="/userlist">View Users</a>
 </body>
 </html>
